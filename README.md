@@ -1,4 +1,4 @@
-Working through the [Tailwind YouTube demo](https://youtube.com/playlist?list=PL5f_mz_zU5eXWYDXHUDOLBE0scnuJofO0), with commits of demos of:
+The first repo from working through the [Tailwind YouTube demo](https://youtube.com/playlist?list=PL5f_mz_zU5eXWYDXHUDOLBE0scnuJofO0), with commits of demos of:
 
 * [01: Setting Up Tailwind CSS](https://youtu.be/qYgogv4R8zg)
   * Running Tailwind using the CDN - [Commit link](https://github.com/jro31/tailwind-demo/commit/7215602fd87adcf9e3c42f14a7a5800d12e357d4)
