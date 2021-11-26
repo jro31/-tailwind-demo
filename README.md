@@ -71,3 +71,7 @@ Working through the [Tailwind YouTube demo](https://youtube.com/playlist?list=PL
   * An example of chaining breakpoints (`sm`) with states (`hover`) (`sm:hover:bg-green-500`) and updating the `tailwind.config.js` file to allow `active` state styling (`active:bg-indigo-600`) - [Commit link](https://github.com/jro31/tailwind-demo/commit/7998c897277c6f7f946684869cd58134f9254600)
     * Which is not enabled by default
   * An example of enabling state variants for less common cases, such as changing the font-size on hover (`sm:hover:text-3xl`), which are disabled by default - [Commit link](https://github.com/jro31/tailwind-demo/commit/4947f1506f0c0bdd6ff7417d8da09bf8b339f07f)
+* [05: Composing Utilities with @apply](https://youtu.be/TrftauE2Vyk)
+  * Using `@apply` to create a `btn` class that can be used globally (instead of setting all the button styling inline), and an explanation of why we're wrapping it in `@layer components` - [Commit link](https://github.com/jro31/tailwind-demo/commit/a19cbd6ef117c0a158361d09c27a84f934c32b58)
+  * Adding `btn-primary` and `btn-secondary` classes (again using `@apply`), to work with the `btn` class so we can have multiple button styles - [Commit link](https://github.com/jro31/tailwind-demo/commit/7ee7ec38c33db913d44d518196a6375f0d5d9dd5)
+    * Also includes a brief explanation of why we shouldn't go overboard doing this
