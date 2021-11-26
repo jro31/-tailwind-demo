@@ -62,12 +62,15 @@
                 rounded-lg
                 shadow-lg
                 bg-indigo-500
-                hover:bg-indigo-400 hover:-translate-y-0.5
+                hover:bg-indigo-400
+                sm:hover:bg-green-500
+                hover:-translate-y-0.5
                 focus:outline-none
                 focus:ring
                 focus:ring-offset-2
                 focus:ring-indigo-500
                 focus:ring-opacity-50
+                active:bg-indigo-600
                 transform
                 transition
                 text-white
@@ -94,8 +97,4 @@
   </body>
 </html>
 
-<!-- 'focus:outline-none' removes the outline on a focussed elements that a browser may add by default -->
-<!-- 'ring' adds a ring around the element, with the default settings (basically a fancy box-shadow) -->
-<!-- 'focus:ring' means that this "ring" only displays when the button is focussed -->
-<!-- 'focus:ring-offset-2' offsets this ring (essentially gives it some padding) of 2px -->
-<!-- 'focus:ring-indigo-500' and 'focus:ring-opacity-50' set the colour and opacity of this ring -->
+<!-- 'active:bg-indigo-600' will not work out of the box, because 'active' is not enabled by default -->
