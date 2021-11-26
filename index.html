@@ -63,6 +63,11 @@
                 shadow-lg
                 bg-indigo-500
                 hover:bg-indigo-400 hover:-translate-y-0.5
+                focus:outline-none
+                focus:ring
+                focus:ring-offset-2
+                focus:ring-indigo-500
+                focus:ring-opacity-50
                 transform
                 transition
                 text-white
@@ -89,13 +94,8 @@
   </body>
 </html>
 
-<!-- 'hover:bg-indigo-400' sets the color when hovering -->
-<!-- 'hover:-translate-y-0.5' when used with 'transform' moves the button up when hovered over -->
-<!-- 'hover:-translate-y-0.5' sets a variable of '--tw-translate-y: -0.125rem;' (when hovering over the button) -->
-<!-- 'transform' then adds 'transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));' with default values for all these variables (the default for '--tw-translate-y' is '--tw-translate-y: 0') -->
-<!-- However, when hovering over the button, the default of '--tw-translate-y' is over-written to '--tw-translate-y: -0.125rem;' -->
-
-<!-- 'transition' adds the default transition settings: -->
-<!-- 'transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;' -->
-<!-- 'transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);' -->
-<!-- 'transition-duration: 150ms;' -->
+<!-- 'focus:outline-none' removes the outline on a focussed elements that a browser may add by default -->
+<!-- 'ring' adds a ring around the element, with the default settings (basically a fancy box-shadow) -->
+<!-- 'focus:ring' means that this "ring" only displays when the button is focussed -->
+<!-- 'focus:ring-offset-2' offsets this ring (essentially gives it some padding) of 2px -->
+<!-- 'focus:ring-indigo-500' and 'focus:ring-opacity-50' set the colour and opacity of this ring -->
