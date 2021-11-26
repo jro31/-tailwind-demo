@@ -50,3 +50,24 @@ Working through the [Tailwind YouTube demo](https://youtube.com/playlist?list=PL
   * Styling the page for the `xl` and `2xl` breakpoints, including: - [Commit link](https://github.com/jro31/tailwind-demo/commit/f114269d7783fb5e59818e20f1d0a6aa971a9110)
     * `2xl:grid-cols-5`, which adds 5 columns (instead of 2) for `2xl` screen sizes
     * `2xl:col-span-2` and `2xl:col-span-3` are then used to spread the page content over these five columns
+* [04: Hover, Focus and Other States](https://youtu.be/5_BPDve5-3M)
+  * Adding some `hover` styling to the button: - [Commit link](https://github.com/jro31/tailwind-demo/commit/749e5a6e344272d91c7a642205e3c87ae1b10da0)
+    * `hover:bg-indigo-400` (to change the color while hovering)
+    * `hover:-translate-y-0.5` and `transform` (to move the button 'up' slightly when hovered over)
+      * `hover:-translate-y-0.5` sets a variable of `--tw-translate-y: -0.125rem;` (when hovering over the button)
+      * `transform` adds `transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));` with default values for all these variables.
+        * The default for `--tw-translate-y` is `--tw-translate-y: 0`
+      * When hovering over the button, the value of `--tw-translate-y` is then over-written to `--tw-translate-y: -0.125rem;`
+    * `transition` (to add the default transition settings)
+      * `transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;`
+      * `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);`
+      * `transition-duration: 150ms;`
+  * Adding some `focus` styling: - [Commit link](https://github.com/jro31/tailwind-demo/commit/7ff9fdf5987b61bb6473cf7608608b41681be6db)
+    * `focus:outline-none` (to remove the outline on focussed elements that some browsers add by default)
+    * `ring` (adds a 'ring' around an element - basically a fancy box-shadow), so `focus:ring` only displays this ring when the element is focussed
+    * `focus:ring-offset-2` (offsets this ring; essentially giving it some padding of 2px)
+    * `focus:ring-indigo-500` (sets the colour of this ring)
+    * `focus:ring-opacity-50` (sets the opacity)
+  * An example of chaining breakpoints (`sm`) with states (`hover`) (`sm:hover:bg-green-500`) and updating the `tailwind.config.js` file to allow `active` state styling (`active:bg-indigo-600`) - [Commit link](https://github.com/jro31/tailwind-demo/commit/7998c897277c6f7f946684869cd58134f9254600)
+    * Which is not enabled by default
+  * An example of enabling state variants for less common cases, such as changing the font-size on hover (`sm:hover:text-3xl`), which are disabled by default - [Commit link](https://github.com/jro31/tailwind-demo/commit/4947f1506f0c0bdd6ff7417d8da09bf8b339f07f)
