@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-block
+    px-5
+    py-3
+    rounded-lg
+    shadow-lg
+    bg-indigo-500
+    hover:bg-indigo-400
+    sm:hover:text-3xl
+    hover:-translate-y-0.5
+    focus:outline-none
+    focus:ring
+    focus:ring-offset-2
+    focus:ring-indigo-500
+    focus:ring-opacity-50
+    active:bg-indigo-600
+    transform
+    transition
+    text-white
+    uppercase
+    tracking-wider
+    font-semibold
+    text-sm
+    sm:text-base;
+  }
+}
+
+// This creates a '.btn' class that has all the included styling, so it can be reused anywhere
+
+// Using '@layer' here ensures that the '.btn' class is generated in the correct place (before 'utilities')
+// (you could alternatively just add the '.btn' class before '@tailwind utilities', but this way is cleaner and saves you remembering)
+// If it was generated after, you wouldn't be able to over-write the '.btn' class styling
+// For example <a class='btn px-10'> would have styling of 'px-5' (from the '.btn' styling), because the 'px-10' is generated with the '@tailwind utilities' declaration, then you would generate the '.btn' class afterwards
+// Instead, we need to generate '.btn' first (straight after 'components'), then run '@tailwind utilities' afterwards. That is what '@layer components' does here.
